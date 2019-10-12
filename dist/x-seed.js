@@ -124,11 +124,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  cache: [],
 	  show: function show(opts) {
+	    var _this = this;
+
 	    opts = _extends({}, this.defaultOptions, { buttons: false, maskHide: false, className: 'x-mask' }, opts);
 	    console.log(opts);
-	    var m = _xDialog2.default.show(opts);
-	    this.cache.push(m);
-	    return m;
+	    var f = void 0;
+	    _xDialog2.default.show(opts)(function (m) {
+	      _this.cache.push(m);
+	      f && f(m);
+	    });
+	    return function (t) {
+	      f = t;
+	    };
 	  },
 	  hide: function hide() {
 	    var m = this.cache.pop();
@@ -246,16 +253,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }], [{
 	    key: "show",
 	    value: function show(config) {
+	      console.log(1111)
 	      var myRef = _react2.default.createRef;
+	      var f;
 	      var div = document.createDocumentFragment('div');
 	      var currentConfig = _extends({ children: config.content }, config, { isShow: true, ref: function ref(_ref) {
-	          return myRef = _ref;
+	           myRef = _ref;
+	           f && f(myRef);
+	           return myRef;
 	        } });
 	      function render(props) {
 	        _reactDom2.default.render(_react2.default.createElement(Dialog, props), div);
 	      }
 	      render(currentConfig);
-	      return myRef;
+	      return (t)=>{
+	        f= t;
+	      };
 	    }
 	  }, {
 	    key: "hide",

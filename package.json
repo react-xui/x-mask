@@ -1,6 +1,6 @@
 {
   "name": "x-mask",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react x-mask 遮罩层效果",
   "main": "./lib/index.js",
   "repository": {
@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "jsdom": "^15.1.1",
-    "x-dialog": "^1.1.0"
+    "x-dialog": "^1.1.4"
   },
   "tags": [
     "react",

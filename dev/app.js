@@ -21,6 +21,13 @@ class App extends React.Component {
   testFunc2(){
     Mask.show({container:document.getElementById('container'),mask:true})
   }
+  componentDidMount(){
+      Mask.show()(()=>{
+        setTimeout(()=>{
+          Mask.hide();
+        },1000)
+      });
+  }
   render() {
     return (
       <div>
