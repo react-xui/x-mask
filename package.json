@@ -60,6 +60,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "jsdom": "^15.1.1",
     "x-dialog": "^1.1.0"
   },
   "tags": [
