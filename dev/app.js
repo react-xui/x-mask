@@ -1,3 +1,10 @@
+/*
+ * @Descripttion: 
+ * @Author: tianxiangbing
+ * @Date: 2019-09-09 17:33:29
+ * @LastEditTime: 2020-03-26 19:59:28
+ * @github: https://github.com/tianxiangbing
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Mask from '../src/index';
@@ -28,11 +35,15 @@ class App extends React.Component {
         },1000)
       });
   }
+  hide(){
+    Mask.hide();
+  }
   render() {
     return (
       <div>
         <button onClick={this.testFunc.bind(this)}>测试方法</button>
         <button onClick={this.testFunc2.bind(this)}>指定容器loading</button>
+        <button onClick={this.hide.bind(this)}>隐藏</button>
         <div className="container" style={{backgroundColor:'#ececec',height:'500px'}} id="container"></div>
       </div>
     )

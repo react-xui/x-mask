@@ -1,6 +1,6 @@
 {
   "name": "x-mask",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "react x-mask 遮罩层效果",
   "main": "./lib/index.js",
   "repository": {
@@ -33,9 +33,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "jest": "23.6.0",
     "babel-cli": "^6.23.0",
     "babel-core": "^6.7.4",
     "babel-eslint": "^7.1.1",
@@ -46,8 +43,11 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-2": "^6.18.0",
     "css-loader": "^0.23.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "gitbook-cli": "^2.3.0",
+    "jest": "23.6.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "npm-run-all": "^3.1.2",
@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "jsdom": "^15.1.1",
-    "x-dialog": "^1.1.4"
+    "x-dialog": "^1.1.7"
   },
   "tags": [
     "react",
